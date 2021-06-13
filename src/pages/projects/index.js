@@ -1,0 +1,1 @@
+export {default as TuBirra} from './TuBirra';
