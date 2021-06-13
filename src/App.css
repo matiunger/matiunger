@@ -2,3 +2,38 @@
   text-align: center;
   margin-top: 40px;
 }
+
+header .logo {
+  width: 100px;
+  height: 100px;
+}
+
+header nav {
+
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+header nav ul li {
+  display: inline-block;
+  height: 25px;
+  min-width: 100px;
+  padding: 0 auto;
+}
+header nav ul li a{
+  text-decoration: none;
+  text-transform: lowercase;
+  color: rgb(90, 90, 90);
+}
+
+.Routes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
