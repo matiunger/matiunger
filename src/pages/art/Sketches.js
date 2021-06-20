@@ -6,7 +6,7 @@ import React from 'react';
 function Sketches() {
 
     return (
-        <div className="App">
+        <div>
             <p>my sketches</p>
         </div>
     );

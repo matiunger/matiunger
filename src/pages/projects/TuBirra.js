@@ -6,7 +6,7 @@ import React from 'react';
 function TuBirra() {
 
     return (
-        <div className="App">
+        <div>
             <p>tu birra project</p>
         </div>
     );

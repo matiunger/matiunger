@@ -6,7 +6,7 @@ import React from 'react';
 function Paitings() {
 
     return (
-        <div className="App">
+        <div>
             <p>my paitings</p>
         </div>
     );

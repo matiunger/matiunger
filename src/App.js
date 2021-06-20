@@ -32,10 +32,15 @@ function Header() {
 
 function Entry(props) {
 
+  const data = props.data
+  const path = "/" + data.category + "/" + data.id
   return (
-    <div>
-      <p>{props.category} | {props.name} | <Link to={props.path}>{props.path}</Link></p>
-    </div>
+    <Link to={path} className="entry">
+      <div>
+        <p className="entry__title"><span className="entry__icon">{data.icon}</span>{data.name}</p>
+        <p className="entry__description">{data.description}</p>
+      </div>
+    </Link>
   )
 
 }
@@ -48,8 +53,8 @@ function List(props) {
     filteredEntries = _.filter(entries, function (o) { return o.category === props.category }) || []
   }
   return (
-    <div>
-      {filteredEntries.map((item) => { return <Entry name={item.name} path={"/"+item.category+"/"+item.id} category={item.category} /> })}
+    <div className="entries" style={props.style}>
+      {filteredEntries.map((item) => { return <Entry data={item} /> })}
     </div>
   )
 
@@ -59,7 +64,7 @@ function Page(props) {
   const { c, p } = useParams()
   let filteredEntry = _.filter(props.entries, function (o) { return (o.category === c && o.id === p) }) || []
   const EntryComponent = filteredEntry[0]["component"]
-  return <EntryComponent />;
+  return <div className="page" style={props.style}><EntryComponent /></div>;
 }
 
 
@@ -71,33 +76,39 @@ function App() {
     {
       "id": "paintings",
       "name": "Paitings",
+      "description": "Oil and acrylic paintings",
       "category": "art",
+      "icon": "🎨",
       "component": Paitings,
     },
     {
       "id": "sketches",
       "name": "Sketches",
+      "description": "pencil sketches and caricatures",
       "category": "art",
+      "icon": "✏️",
       "component": Sketches,
     },
     {
       "id": "tubirra",
       "name": "Tu Birra",
+      "description": "web app",
       "category": "projects",
+      "icon": "🍺",
       "component": TuBirra,
     }
   ]
 
   const transitions = useTransition(location, {
-    from: { opacity: 0, width: "0%" },
-    enter: { opacity: 1, width: "100%" },
-    leave: { opacity: 0, width: "0%" }
+    from: { opacity: 0, transform:"translateX(-100px)" },
+    enter: { opacity: 1, transform:"translateX(0px)" },
+    leave: { opacity: 0, transform:"translateX(100px)" }
   });
 
   return (
     <div className="App">
       <Header />
-      <div className="Routes">
+      <div className="routes">
         {transitions((props, item) => (
           <animated.div style={props}>
             <Switch location={item}>
