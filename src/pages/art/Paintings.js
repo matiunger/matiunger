@@ -9,17 +9,14 @@ import Glaciar from '../../img/paintings/Glaciar.jpg';
 import Ice from '../../img/paintings/Ice.jpg';
 import Papagayo from '../../img/paintings/Papagayo.jpg';
 import Playa from '../../img/paintings/Playa.jpg';
-
-
-
+import Purmamarca from '../../img/paintings/Purmamarca.jpg';
+import Sea from '../../img/paintings/Sea.jpg';
+import Tucan from '../../img/paintings/Tucan.jpg';
 
 import './Paintings.css';
 
 function Paitings() {
-
-    const requestImageFile = require.context('', true);
-
-
+    
     const photos = [
         {
             src: Amarnecer,
@@ -45,10 +42,46 @@ function Paitings() {
             src: Fruits,
             width: 1000,
             height: 813
+        },
+        {
+            src: Glaciar,
+            width: 1000,
+            height: 563
+        },
+        {
+            src: Ice,
+            width: 1000,
+            height: 716
+        },
+        {
+            src: Papagayo,
+            width: 1000,
+            height: 790
+        },
+        {
+            src: Playa,
+            width: 1000,
+            height: 806
+        },
+        {
+            src: Purmamarca,
+            width: 1000,
+            height: 799
+        },
+        {
+            src: Sea,
+            width: 1200,
+            height: 691
+        },
+        {
+            src: Tucan,
+            width: 1000,
+            height: 785
         }
+
     ];
     return (
-        <div className="paintings">
+        <div className="photos">
             <Gallery photos={photos} direction={"column"} />
         </div>
     );

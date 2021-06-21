@@ -1,0 +1,12 @@
+.photos {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.photos ul {
+    text-align: left;
+    padding: 0 30%;
+}
+.photos p {
+    margin: 24px 0;
+}

@@ -3,8 +3,9 @@ import logo from './img/web_avatar2.png';
 import './App.css';
 import { Switch, Route, Link, useLocation, useParams } from "react-router-dom";
 import { animated, useTransition } from "react-spring";
-import { Paitings, Sketches } from "./pages/art";
-import { TuBirra } from "./pages/projects";
+import { Paitings, Sketches, Bungalow } from "./pages/art";
+import { TuBirra, Timetab } from "./pages/projects";
+
 import _ from "lodash";
 
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -73,8 +74,13 @@ function List(props) {
 function Page(props) {
   const { c, p } = useParams()
   let filteredEntry = _.filter(props.entries, function (o) { return (o.category === c && o.id === p) }) || []
-  const EntryComponent = filteredEntry[0]["component"]
-  return <div className="page" style={props.style}><EntryComponent /></div>;
+  const entry = filteredEntry[0]
+  const EntryComponent = entry["component"]
+  
+  return <div className="page" style={props.style}>
+    <h2 className="page__title">{entry["name"]}</h2>
+    <EntryComponent />
+    </div>;
 }
 
 
@@ -88,7 +94,7 @@ function App() {
       "name": "Paitings",
       "description": "Oil and acrylic paintings",
       "category": "art",
-      "icon": "🎨",
+      "icon": "🖌️",
       "component": Paitings,
     },
     {
@@ -102,10 +108,26 @@ function App() {
     {
       "id": "tubirra",
       "name": "Tu Birra",
-      "description": "web app",
+      "description": "tubirra.com recommends the best styles of beer for your taste",
       "category": "projects",
       "icon": "🍺",
       "component": TuBirra,
+    },
+    {
+      "id": "bungalow",
+      "name": "Bungalow mural",
+      "description": "Mural painting in Munich's Olympic Village",
+      "category": "art",
+      "icon": "🎨",
+      "component": Bungalow,
+    },
+    {
+      "id": "timetab",
+      "name": "Timetab",
+      "description": "A beautiful new tab page to take control of your time.",
+      "category": "projects",
+      "icon": "⌛",
+      "component": Timetab,
     }
   ]
 
