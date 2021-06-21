@@ -43,7 +43,7 @@ function TuBirra() {
     return (
         <div className="photos">
             <p>tubirra.com recommends the best styles of beer for your taste</p>
-            <p><a href="http://www.tubirra.com" target="_blank">http://www.tubirra.com</a></p>
+            <p><a href="http://www.tubirra.com" target="_blank" rel="noopener noreferrer">http://www.tubirra.com</a></p>
             <Gallery photos={photos} direction={"row"} targetRowHeight={300} />
         </div>
     );

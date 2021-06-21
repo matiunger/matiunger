@@ -13,11 +13,61 @@ import Purmamarca from '../../img/paintings/Purmamarca.jpg';
 import Sea from '../../img/paintings/Sea.jpg';
 import Tucan from '../../img/paintings/Tucan.jpg';
 
+import Caballo from '../../img/paintings/caballo.png';
+import Camaleon from '../../img/paintings/camaleon.png';
+import Perito from '../../img/paintings/peritomoreno.png';
+import Leon from '../../img/paintings/leon.png';
+import Calm2 from '../../img/paintings/olascalm2.png';
+import Selva from '../../img/paintings/selva.png';
+import Tigre from '../../img/paintings/tigre.png';
+import Wave from '../../img/paintings/wave.png';
+
 import './Paintings.css';
 
 function Paitings() {
-    
+
     const photos = [
+
+        {
+            src: Caballo,
+            width: 1200,
+            height: 1600
+        },
+        {
+            src: Camaleon,
+            width: 1200,
+            height: 964
+        },
+        {
+            src: Perito,
+            width: 1500,
+            height: 804
+        },
+        {
+            src: Leon,
+            width: 1200,
+            height: 1200
+        },
+        {
+            src: Calm2,
+            width: 1000,
+            height: 1486
+        },
+        {
+            src: Selva,
+            width: 945,
+            height: 1200
+        },
+        {
+            src: Tigre,
+            width: 1200,
+            height: 793
+        },
+        {
+            src: Wave,
+            width: 864,
+            height: 1200
+        },
         {
             src: Amarnecer,
             width: 1000,

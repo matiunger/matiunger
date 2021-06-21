@@ -91,7 +91,7 @@ function App() {
   const entries = [
     {
       "id": "paintings",
-      "name": "Paitings",
+      "name": "Paintings",
       "description": "Oil and acrylic paintings",
       "category": "art",
       "icon": "🖌️",
