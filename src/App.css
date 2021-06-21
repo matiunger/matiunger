@@ -1,4 +1,105 @@
 .App {
   text-align: center;
-  margin-top: 40px;
+  margin: 40px 0;
+  height: 100;
+}
+
+header .logo {
+  width: 100px;
+  height: 100px;
+}
+
+header nav {
+
+}
+
+header nav ul {
+  display: flex;
+  padding:0;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+header nav ul li {
+  display: inline-block;
+  height: 25px;
+  margin:0 16px;
+  padding: 0 auto;
+}
+
+header nav ul .nav--active {
+  border-bottom: 1px rgb(221, 221, 221) dashed;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: rgb(90, 90, 90);
+}
+
+.routes {
+  display: flex;
+  width: 100%;
+  justify-items: center;
+  justify-content: center;
+}
+
+.routes > div {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.entries, .page {
+  height: 100%;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.entries {
+  
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.entry {
+  width: 100%;
+  max-width: 450px;
+  margin: 8px auto;
+  padding: 16px;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.entry:hover {
+  border: 1px solid rgb(82, 82, 82);
+}
+
+.entry .entry__title{
+  text-transform: none;
+  margin:0;
+  text-align: center;
+  color: rgb(43, 43, 43);  
+  font-size: 16px;
+}
+
+.entry .entry__title .entry__icon {
+  margin-right: 10px;
+}
+
+.entry .entry__description{
+  color: rgb(105, 105, 105);
+  font-size: 12px;
+  text-align: center;
+  margin: 8px 0 0 0;
 }
