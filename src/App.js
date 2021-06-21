@@ -7,21 +7,31 @@ import { Paitings, Sketches } from "./pages/art";
 import { TuBirra } from "./pages/projects";
 import _ from "lodash";
 
+import GitHubIcon from '@material-ui/icons/GitHub';
+import EmailIcon from '@material-ui/icons/Email';
+
 function Header() {
+
+  const location = useLocation();
+  const section = location.pathname.split("/")[1]
+
   return (
     <header>
       <div className="logo-container"><img className="logo" src={logo} alt="Logo" /></div>
       <nav>
         <ul>
-          <li>
+          <li className={section === "" ? "nav--active" : ""}>
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className={section === "projects" ? "nav--active" : ""}>
             <Link to="/projects">Projects</Link>
           </li>
+          <li className={section === "art" ? "nav--active" : ""}>
+            <Link to="/art">Art</Link>
+          </li>
           <li>
-            <Link to="/art">Art
-            </Link>
+            <a href="mailto:matiunger@gmail.com" style={{"marginRight" : "6dpx"}}><EmailIcon fontSize="small" /></a>
+            <a href="https://github.com/matiunger" target="_blanck" ><GitHubIcon fontSize="small" /></a>
           </li>
         </ul>
       </nav>
@@ -54,7 +64,7 @@ function List(props) {
   }
   return (
     <div className="entries" style={props.style}>
-      {filteredEntries.map((item) => { return <Entry data={item} /> })}
+      {filteredEntries.map((item) => { return <Entry key={item.id} data={item} /> })}
     </div>
   )
 
