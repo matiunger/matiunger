@@ -1,15 +1,15 @@
 {
-  "main.css": "/static/css/main.288098f1.chunk.css",
-  "main.js": "/static/js/main.5771cc4d.chunk.js",
-  "main.js.map": "/static/js/main.5771cc4d.chunk.js.map",
+  "main.css": "/static/css/main.574bc0cc.chunk.css",
+  "main.js": "/static/js/main.638d2f3d.chunk.js",
+  "main.js.map": "/static/js/main.638d2f3d.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
   "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.7927555f.chunk.js": "/static/js/2.7927555f.chunk.js",
-  "static/js/2.7927555f.chunk.js.map": "/static/js/2.7927555f.chunk.js.map",
+  "static/js/2.1a85bea2.chunk.js": "/static/js/2.1a85bea2.chunk.js",
+  "static/js/2.1a85bea2.chunk.js.map": "/static/js/2.1a85bea2.chunk.js.map",
   "index.html": "/index.html",
-  "precache-manifest.68afb72fff4f85c46f0ed790ac4e9989.js": "/precache-manifest.68afb72fff4f85c46f0ed790ac4e9989.js",
+  "precache-manifest.8b8c195b79ac809685645a2b8dcdc6b5.js": "/precache-manifest.8b8c195b79ac809685645a2b8dcdc6b5.js",
   "service-worker.js": "/service-worker.js",
-  "static/css/main.288098f1.chunk.css.map": "/static/css/main.288098f1.chunk.css.map",
+  "static/css/main.574bc0cc.chunk.css.map": "/static/css/main.574bc0cc.chunk.css.map",
   "static/media/Ale.jpg": "/static/media/Ale.6a628fba.jpg",
   "static/media/Alex.jpg": "/static/media/Alex.2d1603d0.jpg",
   "static/media/Amarnecer.jpg": "/static/media/Amarnecer.bc5381bd.jpg",
@@ -34,6 +34,7 @@
   "static/media/Sonia.jpg": "/static/media/Sonia.d33db0ff.jpg",
   "static/media/Steve_Jobs.jpg": "/static/media/Steve_Jobs.8085b36e.jpg",
   "static/media/Tucan.jpg": "/static/media/Tucan.ea036fae.jpg",
+  "static/media/index.css": "/static/media/background.41180b02.png",
   "static/media/bungalow1.jpg": "/static/media/bungalow1.af2a54ec.jpg",
   "static/media/bungalow2.jpg": "/static/media/bungalow2.5e44edb9.jpg",
   "static/media/bungalow3.jpg": "/static/media/bungalow3.90596830.jpg",
@@ -59,5 +60,5 @@
   "static/media/tubirra4.png": "/static/media/tubirra4.e00953de.png",
   "static/media/tubirra5.png": "/static/media/tubirra5.da7370f3.png",
   "static/media/wave.png": "/static/media/wave.1f7c1a68.png",
-  "static/media/web_avatar2.png": "/static/media/web_avatar2.1744fb2f.png"
+  "static/media/web_avatar600.png": "/static/media/web_avatar600.96cb3c38.png"
 }
