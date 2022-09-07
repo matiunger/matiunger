@@ -1,6 +1,6 @@
 {
-  "name": "matiunger",
-  "version": "0.1.0",
+  "name": "munger.art",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@material-ui/icons": "^4.11.2",

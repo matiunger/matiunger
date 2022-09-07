@@ -1,15 +1,16 @@
 import React from 'react';
-import logo from './img/web_avatar2.png';
+import logo from './img/web_avatar600.png';
 import './App.css';
 import { Switch, Route, Link, useLocation, useParams } from "react-router-dom";
 import { animated, useTransition } from "react-spring";
-import { Paitings, Sketches, Bungalow } from "./pages/art";
+import { Paitings, Sketches, Bungalow, TrendyPotatoes } from "./pages/art";
 import { TuBirra, Timetab } from "./pages/projects";
 
 import _ from "lodash";
 
-import GitHubIcon from '@material-ui/icons/GitHub';
-import EmailIcon from '@material-ui/icons/Email';
+/*import GitHubIcon from '@material-ui/icons/GitHub';*/
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 function Header() {
 
@@ -24,15 +25,21 @@ function Header() {
           <li className={section === "" ? "nav--active" : ""}>
             <Link to="/">Home</Link>
           </li>
-          <li className={section === "projects" ? "nav--active" : ""}>
+          {/* <li className={section === "projects" ? "nav--active" : ""}>
             <Link to="/projects">Projects</Link>
           </li>
           <li className={section === "art" ? "nav--active" : ""}>
             <Link to="/art">Art</Link>
+          </li> */}
+          <li className={section === "about" ? "nav--active" : ""}>
+            <Link to="/about">About</Link>
           </li>
-          <li>
-            <a href="mailto:matiunger@gmail.com" style={{"marginRight" : "6dpx"}}><EmailIcon fontSize="small" /></a>
-            <a href="https://github.com/matiunger" target="_blanck" ><GitHubIcon fontSize="small" /></a>
+          <li className={section === "about" ? "nav--active" : ""}>
+            <Link to={{ pathname: "https://opensea.io/munger-art" }} target="_blank">OpenSea</Link>
+          </li>
+          <li className="social-icons">
+            <a href="https://instagram.com/munger.art" target="_blanck" ><InstagramIcon fontSize="small" /></a>
+            <a href="mailto:matiunger@gmail.com" style={{"marginRight" : "6dpx"}}><MailOutlineIcon fontSize="small" /></a>
           </li>
         </ul>
       </nav>
@@ -83,6 +90,12 @@ function Page(props) {
     </div>;
 }
 
+function About(props) {
+  return <div className="page" style={props.style}>
+    <h2 className="page__title">Hi, I'm Mathi!</h2>
+    <p>and this site is the home for my art and experimental projects.</p>
+    </div>;
+}
 
 function App() {
 
@@ -100,35 +113,43 @@ function App() {
     {
       "id": "sketches",
       "name": "Sketches",
-      "description": "pencil sketches and caricatures",
+      "description": "Pencil sketches and caricatures",
       "category": "art",
       "icon": "✏️",
       "component": Sketches,
     },
-    {
+    /*{
       "id": "tubirra",
       "name": "Tu Birra",
       "description": "tubirra.com recommends the best styles of beer for your taste",
       "category": "projects",
       "icon": "🍺",
       "component": TuBirra,
-    },
+    },*/
     {
       "id": "bungalow",
-      "name": "Bungalow mural",
+      "name": "Mural",
       "description": "Mural painting in Munich's Olympic Village",
       "category": "art",
       "icon": "🎨",
       "component": Bungalow,
     },
     {
+      "id": "trendypotatoes",
+      "name": "Trendy Potatoes NFTs",
+      "description": "Automated collection of digital art as non fungible tokens",
+      "category": "art",
+      "icon": "🥔",
+      "component": TrendyPotatoes,
+    },
+    /*{
       "id": "timetab",
       "name": "Timetab",
       "description": "A beautiful new tab page to take control of your time.",
       "category": "projects",
       "icon": "⌛",
       "component": Timetab,
-    }
+    }*/
   ]
 
   const transitions = useTransition(location, {
@@ -148,6 +169,7 @@ function App() {
               <Route exact path="/projects"><List category="projects" entries={entries} /></Route>
               <Route exact path="/art"><List category="art" entries={entries} /></Route>
               <Route exact path="/:c/:p"><Page entries={entries} /></Route>
+              <Route exact path="/about"><About /></Route>
             </Switch>
           </animated.div>
         ))}
