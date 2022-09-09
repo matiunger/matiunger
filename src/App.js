@@ -3,7 +3,7 @@ import logo from './img/web_avatar600.png';
 import './App.css';
 import { Switch, Route, Link, useLocation, useParams } from "react-router-dom";
 import { animated, useTransition } from "react-spring";
-import { Paitings, Sketches, Bungalow, TrendyPotatoes } from "./pages/art";
+import { Paitings, Sketches, Bungalow, NFTs } from "./pages/art";
 import { TuBirra, Timetab } from "./pages/projects";
 
 import _ from "lodash";
@@ -34,7 +34,7 @@ function Header() {
           <li className={section === "about" ? "nav--active" : ""}>
             <Link to="/about">About</Link>
           </li>
-          <li className={section === "about" ? "nav--active" : ""}>
+          <li className={section === "opensea" ? "nav--active" : ""}>
             <Link to={{ pathname: "https://opensea.io/munger-art" }} target="_blank">OpenSea</Link>
           </li>
           <li className="social-icons">
@@ -135,12 +135,12 @@ function App() {
       "component": Bungalow,
     },
     {
-      "id": "trendypotatoes",
-      "name": "Trendy Potatoes NFTs",
-      "description": "Automated collection of digital art as non fungible tokens",
+      "id": "nfts",
+      "name": "NFTs",
+      "description": "Digital art as non fungible tokens",
       "category": "art",
       "icon": "🥔",
-      "component": TrendyPotatoes,
+      "component": NFTs,
     },
     /*{
       "id": "timetab",
