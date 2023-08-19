@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>tv widget</title>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+    
+      .full-page-div {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body style="height: 100%;">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="full-page-div">
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container" style="height: 100%;">
+        <div id="tradingview_31fd2" style="height: 100%;"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.widget(
+        {
+        "autosize": true,
+        "symbol": "AMEX:SPY",
+        "timezone": "Etc/UTC",
+        "theme": "light",
+        "style": "3",
+        "locale": "en",
+        "enable_publishing": false,
+        "range": "YTD",
+        "allow_symbol_change": true,
+        "show_popup_button": true,
+        "popup_width": "1000",
+        "popup_height": "650",
+        "container_id": "tradingview_31fd2"
+      }
+        );
+        </script>
+      </div>
+      <!-- TradingView Widget END -->
+
+
+    </div>
+  </body>
+</html>
